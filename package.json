@@ -1,0 +1,11 @@
+{
+  "name": "nitis-api",
+  "version": "1.0.0",
+  "description": "Web Server application for serving nitis-fe",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daffa Alfandy",
+  "license": "BSD-2-Clause"
+}

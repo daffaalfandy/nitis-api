@@ -1,0 +1,15 @@
+APP_PORT=3000
+NODE_ENV=production
+
+DB_PORT=3306
+DB_PORT=3306
+DB_HOST=localhost
+DB_USER=root
+DB_PASS=
+DB_NAME=nitis
+DB_CONNECTION_LIMIT=200
+
+SECRET_KEY=nitisproject
+EXPIRED_TOKEN=1d
+
+CLIENT_URI=http://localhost:8080
