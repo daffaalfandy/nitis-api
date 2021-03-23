@@ -12,6 +12,11 @@ app
       origin: process.env.CLIENT_URI,
     })
   )
+  // declared api
+  .use(
+    process.env.NODE_ENV === "development" ? "/api/user" : "/user",
+    require("./api/user/user.router")
+  )
   .listen(process.env.APP_PORT, () => {
     console.log(`Server up and running on PORT: ${process.env.APP_PORT}`);
     console.log(`Server environment: ${process.env.NODE_ENV}`);
