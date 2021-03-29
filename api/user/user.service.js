@@ -59,4 +59,17 @@ module.exports = {
       }
     );
   },
+  getUserSubmitted: (callback) => {
+    pool.query(
+      `SELECT * FROM user_credentials JOIN ticket_information USING(ticket_id) WHERE ticket_information.is_submitted = 1 `,
+      [],
+      (err, results, fields) => {
+        if (err) {
+          err.message = "Database Error";
+          return callback(err);
+        }
+        return callback(null, results);
+      }
+    );
+  },
 };

@@ -36,7 +36,7 @@ module.exports = {
     pool.query(
       "UPDATE `ticket_information` SET `is_confirmed` = ?, `datetime_confirmed` = ? WHERE `ticket_information`.`ticket_id` = ?",
       [
-        data.is_confirmed,
+        Number(data.is_confirmed),
         moment().format("YYYY-MM-DD HH:mm:ss"),
         data.ticket_id,
       ],

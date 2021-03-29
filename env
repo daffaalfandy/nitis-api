@@ -13,3 +13,4 @@ SECRET_KEY=nitisproject
 EXPIRED_TOKEN=1d
 
 CLIENT_URI=http://localhost:8080
+ADMIN_CLIENT_URI=

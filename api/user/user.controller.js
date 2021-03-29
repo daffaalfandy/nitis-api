@@ -3,6 +3,7 @@ const {
   createUser,
   getUserByEmail,
   getTicketInformation,
+  getUserSubmitted,
 } = require("./user.service");
 const { sign } = require("jsonwebtoken");
 
@@ -79,6 +80,22 @@ module.exports = {
           message: "Password tidak sesuai.",
         });
       }
+    });
+  },
+  // get all user submitted from admin side
+  getUserSubmitted: (req, res) => {
+    getUserSubmitted((err, results) => {
+      if (err) {
+        process.env.NODE_ENV === "development" ? console.log(err) : void 0;
+        return res.status(500).json({
+          success: 0,
+          message: err.message,
+        });
+      }
+      return res.status(200).json({
+        success: 1,
+        data: results,
+      });
     });
   },
 };

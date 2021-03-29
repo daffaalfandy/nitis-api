@@ -9,7 +9,7 @@ app
   .use(express.json())
   .use(
     cors({
-      origin: process.env.CLIENT_URI,
+      origin: [process.env.CLIENT_URI, process.env.ADMIN_CLIENT_URI],
     })
   )
   // declared api
